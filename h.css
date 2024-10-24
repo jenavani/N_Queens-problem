@@ -1,0 +1,138 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.landing-page h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.landing-page select,
+.landing-page button {
+    margin: 0.5rem 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    display: none;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+#board {
+    display: grid;
+    gap: 1px;
+    margin: 20px auto;
+    background-color: #d18b47;
+    border: 2px solid #8B4513;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cell:nth-child(odd) {
+    background-color: #ffce9e;
+}
+
+.cell:nth-child(even) {
+    background-color: #d18b47;
+}
+
+.cell.queen {
+    color: #000;
+}
+
+.cell.threatened {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.btn-group {
+    margin-bottom: 1rem;
+}
+
+#message {
+    height: 1.5rem;
+    margin-top: 1rem;
+}
+
+#solutions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.solution-board {
+    display: grid;
+    gap: 1px;
+    background-color: #d18b47;
+    margin-bottom: 1rem;
+    border: 1px solid #8B4513;
+}
+
+.solution-board .cell {
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border: 2px solid #f39c12;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f39c12;
+}
